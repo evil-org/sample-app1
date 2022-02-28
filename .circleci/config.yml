@@ -1,0 +1,43 @@
+---
+version: 2.1
+
+jobs:
+  unit_tests:
+    description: >
+      Runs unit tests for a FastAPI application
+
+    docker:
+      - image: cimg/python:3.10.2
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: Execute pytest
+          command: |
+            # We'll just do an echo here for now since this job
+            # is just part of an example.
+            echo "Run pytests here"
+
+  build:
+    description: >
+      Build the artifact of a FastAPI application
+
+    docker:
+      - image: cimg/python:3.10.2
+
+    steps:
+      - checkout
+
+      - attach_workspace:
+          at: .
+
+      - run:
+          name: Run "make build"
+          command: |
+            # We'll just do an echo here for now since this job
+            # is just part of an example.
+            echo "Run 'make build' here"
