@@ -11,4 +11,5 @@ orbs:
 workflows:
   setup:
     jobs:
-      - golden/setup_fastapi_k8s
+      - golden/setup_fastapi_k8s:
+          project_name: SampleApp1
