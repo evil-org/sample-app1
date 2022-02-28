@@ -9,7 +9,6 @@ orbs:
   golden: evil-org/golden@1
 
 workflows:
-  fastapi_k8s:
+  setup:
     jobs:
-      - golden/unit_tests
-      - golden/build
+      - golden/setup_fastapi_k8s
