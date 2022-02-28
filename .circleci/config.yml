@@ -41,3 +41,9 @@ jobs:
             # We'll just do an echo here for now since this job
             # is just part of an example.
             echo "Run 'make build' here"
+
+workflows:
+  fastapi_k8s:
+    jobs:
+      - unit_tests
+      - build
